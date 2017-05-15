@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Dicos</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+    <string name="search_hint">Search</string>
+    <string name="thumbs_down_format">{fa-thumbs-down 16sp} %s</string>
+    <string name="thumbs_up_format">{fa-thumbs-up 16sp} %s</string>
+    <string name="thumbs_up_sort">Thumbs Up</string>
+    <string name="thumbs_down_sort">Thumbs Down</string>
+    <string name="author_format">By: %s</string>
+</resources>

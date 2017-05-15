@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/sort_options"
+        android:title="Sort By">
+        <menu>
+            <item
+                android:id="@+id/thumbs_up"
+                android:checkable="true"
+                android:icon="@drawable/ic_thumb_up"
+                android:title="@string/thumbs_up_sort" />
+
+            <item
+                android:id="@+id/thumbs_down"
+                android:checkable="true"
+                android:icon="@drawable/ic_thumb_down"
+                android:title="@string/thumbs_down_sort" />
+        </menu>
+
+    </item>
+
+</menu>
