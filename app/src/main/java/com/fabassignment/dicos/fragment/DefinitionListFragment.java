@@ -36,7 +36,7 @@ import butterknife.Unbinder;
  * Created by benifabrice on 5/14/17.
  */
 
-public class DefinitionListFragment extends BusListenerFragment {
+public class DefinitionListFragment extends BusListenerFragment implements DefinitionsView{
     @BindView(R.id.definition_list)
     protected RecyclerView mDefinitionListRecyclerView;
     @BindView(R.id.loading_view)
@@ -63,6 +63,8 @@ public class DefinitionListFragment extends BusListenerFragment {
             originalDefinitionList = (List<Definition>) savedInstanceState.getSerializable("original");
             setLists();
         }
+
+        DefinitionListPresenter presenter = new DefinitionListPresenter(this, null);
         return inflater.inflate(R.layout.fragment_definitions_list, container, false);
     }
 
@@ -175,4 +177,13 @@ public class DefinitionListFragment extends BusListenerFragment {
     }
 
 
+    @Override
+    public void displayDefinitions(List<Definition> definitions) {
+
+    }
+
+    @Override
+    public void displayNoDefinitions() {
+
+    }
 }

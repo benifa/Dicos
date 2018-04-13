@@ -31,7 +31,7 @@ import butterknife.ButterKnife;
  * Created by benifabrice on 5/12/17.
  */
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, MainActivityView {
     @BindView(R.id.drawer_layout)
     protected DrawerLayout mDrawerLayout;
     @BindView(R.id.toolbar)
@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     private SearchView mSearchView;
     private String mSearchQuery;
+    MainActivityPresenter presenter;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -56,6 +57,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         loadListFragment(savedInstanceState);
         setResetClickListener();
         drawerToggle.syncState();
+        presenter = new MainActivityPresenter(this);
     }
 
     private void setResetClickListener() {
