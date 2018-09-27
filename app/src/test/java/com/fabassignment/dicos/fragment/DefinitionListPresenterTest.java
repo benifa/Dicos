@@ -41,9 +41,9 @@ public class DefinitionListPresenterTest {
 
         // when
         DefinitionListPresenter presenter = new DefinitionListPresenter(view, repository);
-        presenter.fetchDefinitions("");
+        presenter.fetchDefinitions(null);
 
-        Assert.assertEquals(false, ((MockView)view).booksNoFound);
+        Assert.assertEquals(true, ((MockView)view).booksNoFound);
 
 
     }
@@ -70,7 +70,7 @@ public class DefinitionListPresenterTest {
         @Override
         public List<Definition> getDefinitions(String query) {
 
-            return  query != null || query.equalsIgnoreCase("") ? Arrays.asList(new Definition(), new Definition(), new Definition())
+            return  query != null  ? Arrays.asList(new Definition(), new Definition(), new Definition())
                     : Collections.<Definition>emptyList();
 
         }
